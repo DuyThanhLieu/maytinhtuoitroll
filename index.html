@@ -1,0 +1,164 @@
+<script>
+    function tinhtuoi() {
+        var tuoinhap = document.getElementById("ageinput").value;
+
+        if (tuoinhap == "") {
+            document.getElementById("vungchua").innerHTML = '<div class="alert alert-danger">Không được để rỗng</div>'
+        } else if (tuoinhap <= 0) {
+            document.getElementById("vungchua").innerHTML = '<div class="alert alert-danger">Mày chưa đẻ mà đòi tao tính à</div>'
+        } else if (tuoinhap <= 100) {
+            document.getElementById("vungchua").innerHTML = '<div class="alert alert-success">Tuổi của bạn là: ' + tuoinhap + '</div>'
+        } else {
+            document.getElementById("vungchua").innerHTML = '<div class="alert alert-danger">Con lạy cụ, cụ có phải là người không vậy ?</div>';
+        }
+    }</script>
+<h1 class="tieude">Máy tính thông minh</h1>
+<div class="container">
+<div class="form-group">
+    <label for="usr">Mời nhập tuổi của bạn: </label>
+    <input type="number" class="form-control" id="ageinput">
+</div>
+<div class="tinhtuoiall">
+    <button type="button" class="btn btn-success" onclick="tinhtuoi()">Tính Tuổi</button>
+</div>
+<div id="vungchua"></div>
+</div>
+<style>
+    * {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 750px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+.tieude{
+      color: red;
+    text-align: center;
+    font-size: 36px;
+        margin-top: 20px;
+    margin-bottom: 10px;
+        margin: 0.67em 0;
+        margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+        cursor: default;
+        font-size: 19px;
+    color: blue;
+    font-weight: 550;
+    cursor: default;
+}
+.form-control{
+        display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn.btn-success{
+    align-items:flex-start;
+background-color:#449d44;
+border-color:#275927;
+border-radius:4px;
+border-style:solid;
+border-width:1px;
+color:#ffffff;
+display:inline-block;
+font-family:Helvetica Neue;
+font-size:14px;
+line-height:20px;
+padding:6px 12px;
+text-align:center;
+margin-top: 12px;
+padding: 6px 12px;
+margin-bottom: 12px;
+
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #555555;
+    border-color: #398439;
+}
+.tinhtuoiall {
+    text-align: center;
+}
+.btn-success.focus, .btn-success:focus {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #255625;
+}
+.form-control {
+  background-color: #ffffff;
+  border-color: #66afe9;
+  border-radius:
+4px;
+border-style:
+solid;
+border-width:
+1px;
+box-shadow:
+#000000 0px 1px 1px 0px;
+color:
+#555555;
+font-family:
+Helvetica Neue;
+font-size:
+14px;
+line-height:
+20px;
+padding:
+6px 12px;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.input {
+    line-height: normal;
+}
+.button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+</style>
